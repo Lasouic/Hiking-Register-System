@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rainier 登山拼车 & 票务</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Rainier 登山拼车 & 票务</h1>
+    <div id="cfg">
+      <form id="configForm">
+        <label>有年票价(美分): <input type="number" id="cfgWith" min="0" required /></label>
+        <label>无年票价(美分): <input type="number" id="cfgWithout" min="0" required /></label>
+        <label>最大车容量: <input type="number" id="cfgCap" min="1" required /></label>
+        <button type="submit">更新配置</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section>
+      <h2>报名</h2>
+      <form id="userForm">
+        <input type="text" id="name" placeholder="姓名" required />
+        <label><input type="checkbox" id="isDriver" /> 车主</label>
+        <label><input type="checkbox" id="hasPass" /> 有年票</label>
+        <button type="submit">添加成员</button>
+      </form>
+
+      <h3>所有成员</h3>
+      <ul id="users"></ul>
+    </section>
+
+    <section>
+      <h2>车辆</h2>
+      <form id="carForm">
+        <select id="driverSelect" required></select>
+        <input type="number" id="capacity" placeholder="容量(含司机)" min="1" required />
+        <button type="submit">创建车辆</button>
+      </form>
+
+      <div id="cars"></div>
+    </section>
+
+    <section>
+      <h2>未分配乘客</h2>
+      <ul id="unassigned"></ul>
+      <button id="autoAssign">自动分配</button>
+
+      <h2>费用汇总</h2>
+      <div id="totals"></div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="refresh">刷新</button>
+    <button id="purge" class="danger">清空所有数据(测试)</button>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "rainier-carpool",
+  "version": "1.0.0",
+  "description": "Rainier 登山拼车与票务结算系统",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js",
+    "init:db": "node server/index.js --init-db"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "better-sqlite3": "^9.6.0"
+  }
+}
