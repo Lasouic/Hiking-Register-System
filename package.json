@@ -1,7 +1,7 @@
 {
   "name": "rainier-carpool",
   "version": "1.0.0",
-  "description": "Rainier 登山拼车与票务结算系统",
+  "description": "Rainier Register System",
   "type": "module",
   "scripts": {
     "dev": "node server/index.js",
