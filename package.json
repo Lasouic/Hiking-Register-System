@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node server/index.js",
-    "init:db": "node server/index.js --init-db"
+    "init:db": "node server/index.js --init-db",
+    "start": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
